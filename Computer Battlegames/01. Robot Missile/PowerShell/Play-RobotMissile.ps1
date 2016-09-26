@@ -8,10 +8,11 @@ Write-Host ''
 
 # N.B - Get-Random's Maximum paramter should be made one higher
 # than the highest number you want to generate.  In the example
-# below, a number between 1 and 26 (inclusive) will be generated
+# below, a number between 97 and 122 (inclusive) will be generated
 $SecretCodeAsNumber = Get-Random -Minimum 97 -Maximum 123
 
-# Cast a number into a character with the same numeric value - e.g 1 = A, 2 =B, etc.
+# Cast a number into a character with the same ASCII value - e.g 97 = A, 98 =B, etc.
+# See here: http://www.asciitable.com/  for more information about ASCII values
 $SecretCode = [Char]$SecretCodeAsNumber
 
 # A variable to store whether the user won.  Initially set to False, and
