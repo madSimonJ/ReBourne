@@ -26,7 +26,9 @@ For($i = 0; $i -le 3; $i++) {
     # Read a keystroke from the console.  There is another method available
     # called Read-Host, but that has the user enter any amount of text
     # they want, followed by return.  Tapping into the console's ReadKey
-    # function allows the capture of a single key-press
+    # function allows the capture of a single key-press.  Console is a
+    # .NET Static Class accessed via PowerShell.  .Net functions are called
+    # using :: instead of a .
    $UsersGuess = [Console]::ReadKey($true).KeyChar
 
     # If the user's guess equals the Secret Code
